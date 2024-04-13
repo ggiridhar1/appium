@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.9.0</version>
+            <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -32,5 +32,28 @@
             <artifactId>java-client</artifactId>
             <version>6.0.0-BETA5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.82</version>
+        </dependency>
+        <dependency>
+            <groupId> org.apache.cassandra</groupId>
+            <artifactId>cassandra-all</artifactId>
+            <version>0.8.1</version>
+
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
     </dependencies>
 </project>
