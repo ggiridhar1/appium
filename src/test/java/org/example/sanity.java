@@ -1,14 +1,10 @@
 package org.example;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.testng.annotations.Test;
@@ -28,18 +24,18 @@ public class sanity extends baseclass {
 	capabilities.setCapability("appium:app", "C:/Users/girid/OneDrive/Documents/apks/9.3.0-qarelease-v9.2.3-D202311060923 (1).apk");
 
 	driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-	//return driver;
+
 
 
 		Thread.sleep(10000);
 
-		 //driver.findElementByXPath("//android.widget.TextView[@content-desc='App']");
+
 		 WebElement phoneNoField =driver.findElementByXPath("//android.widget.EditText[@content-desc='login-phNumber-tb']");
 
 		 //Click on field
 		phoneNoField.click();
 
-//
+
 		//send keys
 		phoneNoField.sendKeys("9972311465");
 
@@ -76,10 +72,6 @@ public class sanity extends baseclass {
 		Thread.sleep(10000);
 
 		closeDriver(driver);
-
-
-
-
 
 	}
 }
